@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Perfil - Clidage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Perfil do Usuário</h2>
+  <header>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../login.html">Login</a>
+      <a href="../perfil.html">Perfil</a>
+      <a href="../admin.html">Admin</a>
+    </nav>
+  </header>
+
+
+  <script src="control/authController.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = localStorage.getItem('loggedUser');
+      if (!user) {
+        document.getElementById('user-info').innerHTML = 'Você não está logado.';
+      } else {
+        document.getElementById('user-info').innerHTML = 'Usuário logado: ' + user;
+      }
+    });
+  </script>
+</body>
+</html>

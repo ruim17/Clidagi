@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Capes</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <header>
+    <style>
+      .titulo-verde {
+        color: #0aff0a;
+        /* verde neon */
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 48px;
+        text-align: center;
+        margin-top: 30px;
+      }
+    </style>
+
+    <h1 class="titulo-verde">Capes</h1>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../login.html">Login</a>
+      <a href="../cadastro.html">Cadastro</a>
+      <a href="../perfil.html">Perfil</a>
+      <a href="../admin.html">Admin</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+
+      <style>
+        .borda-neon {
+          border: 4px solid #0aff0a;
+          box-shadow: 0 0 10px #0aff0a;
+        }
+
+        .container {
+          margin-top: 30px;
+          /* distância para "embaixo" */
+          display: flex;
+          gap: 40px;
+          /* espaço entre as imagens */
+        }
+
+        .container img {
+          display: block;
+          max-width: 400px;
+          /* tamanho máximo opcional */
+        }
+      </style>
+
+      <div class="container">
+        <img src="../imagens/Capes.png" alt="LifeAfter" class="borda-neon">
+        <img src="../imagens/Capes.png" alt="LifeAfter2" class="borda-neon">
+      </div>
+      <style>
+        .titulo-verde {
+          color: #0aff0a;
+          /* verde neon */
+          font-family: 'Segoe UI', sans-serif;
+          font-size: 48px;
+          text-align: center;
+          margin-top: 30px;
+        }
+      </style>
+
+      <h1 class="titulo-verde">Sobre o Capes</h1>
+
+      <style>
+        .texto-bonito {
+          background: rgba(0, 0, 0, 0.6);
+          /* fundo escuro transparente */
+          color: #ffffff;
+          /* cor do texto */
+          padding: 15px 20px;
+          border-radius: 10px;
+          font-family: 'Segoe UI', sans-serif;
+          font-size: 18px;
+          line-height: 1.6;
+          box-shadow: 0 0 10px #0aff0a;
+          /* brilho verde neon opcional */
+          max-width: 600px;
+          margin: 20px auto;
+          text-align: left;
+        }
+      </style>
+
+      <p class="texto-bonito">
+        Capes é um jogo tático baseado em turnos que lembra XCOM, mas ambientado em um mundo de super-heróis. Nele, você
+        lidera um grupo de heróis que lutam para retomar o controle de uma cidade dominada por vilões, após anos em que
+        os poderes foram banidos.
+      </p>
+      <button class="buy-btn" onclick="comprarJogo('Capes', 34.99)">Comprar por 34.99 €</button>
+    </section>
+
+  </main>
+
+  <script>
+    function comprarJogo(nome, preco) {
+      const user = localStorage.getItem('loggedUser');
+      if (!user) {
+        alert('Você precisa estar logado para comprar.');
+        window.location.href = '../login.html';
+        return;
+      }
+
+      // Registrar compra no localStorage
+      let compras = JSON.parse(localStorage.getItem('compras')) || [];
+      compras.push({ usuario: user, jogo: nome, preco: preco, data: new Date().toLocaleString() });
+      localStorage.setItem('compras', JSON.stringify(compras));
+
+      alert('Compra realizada com sucesso!');
+    }
+  </script>
+  <footer>
+    <p>Site Clidage criado por Allison S. & Climon M. & Gisela L. & David B. & Cláudio- 2025</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clidage</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background-color: #000;
+      color: #0aff0a;
+      font-family: Arial, sans-serif;
+      text-align: justify;
+      margin-top: 50px;
+    }
+
+    img {
+      width: 170px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    .titulo-verde {
+      color: #0aff0a;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* Rolagem lateral */
+    .carousel-wrapper {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 30px;
+      padding: 30px;
+    }
+
+    .carousel-wrapper section.carousel {
+      min-width: 300px;
+      scroll-snap-align: start;
+      background-color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #0aff0a55;
+    }
+
+    .game-card {
+      text-align: center;
+    }
+
+    .game-card p {
+      margin-top: 10px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: #0aff0a;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid #0aff0a44;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="titulo-verde">Clidage</h1>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="login.html">Login</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="perfil.html">Perfil</a>
+    <a href="admin.html">Admin</a>
+  </nav>
+
+  <!-- INÍCIO da rolagem lateral -->
+  <div class="carousel-wrapper">
+
+    <!-- Zelda -->
+    <section class="carousel">
+      <div class="game-card">
+        <div id="carouselexam" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="Imagens/Zelda2.png" alt="Zelda 2">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagens/Zelda.png" alt="Zelda">
+            </div>
+          </div>
+        </div>
+        <li><a href="view/jogo1.html">Zelda</a></li> 
+        <p>Zelda é a princesa do reino de Hyrule e uma figura central da série The Legend of Zelda.</p>
+      </div>
+    </section>
+
+    <!-- ARK -->
+    <section class="carousel">
+      <div class="game-card">
+        <div id="carouselcontro" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="Imagens/Ark.png" alt="Ark">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagens/Ark2.png" alt="Ark 2">
+            </div>
+          </div>
+        </div>
+        <li><a href="view/jogo2.html">ARK: Survival Evolved</a></li> 
+        <p>Jogo de sobrevivência com dinossauros, onde o jogador explora, constrói e enfrenta perigos em uma ilha selvagem.</p>
+      </div>
+    </section>
+
+    <!-- Minecraft -->
+    <section class="carousel">
+      <div class="game-card">
+        <div id="carousels" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="Imagens/Minecraft.png" alt="Minecraft">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagens/Minecraft2.png" alt="Minecraft 2">
+            </div>
+          </div>
+        </div>
+        <li><a href="view/jogo3.html">Minecraft</a></li> 
+        <p>Jogo de construção e sobrevivência em mundo aberto com blocos, criatividade e exploração infinita.</p>
+      </div>
+    </section>
+
+    <!-- LifeAfter -->
+    <section class="carousel">
+      <div class="game-card">
+        <div id="carous" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="Imagens/LifeAfter.png" alt="LifeAfter">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagens/LifeAfter2.png" alt="LifeAfter 2">
+            </div>
+          </div>
+        </div>
+        <li><a href="view/jogo4.html">Life After</a></li> 
+        <p>Explora mundos fantásticos com desafios incríveis neste jogo de aventura.</p>
+      </div>
+    </section>
+
+    <!-- Capes -->
+    <section class="carousel">
+      <div class="game-card">
+        <div id="carou" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="Imagens/Capes.png" alt="Capes">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="Imagens/Capes2.png" alt="Capes 2">
+            </div>
+          </div>
+        </div>
+        <li><a href="view/jogo5.html">Capes</a></li> 
+        <p>Jogo tático de super-heróis em turnos, onde heróis lutam para retomar a cidade de vilões dominantes.</p>
+      </div>
+    </section>
+
+  </div> <!-- FIM .carousel-wrapper -->
+
+  <footer>
+    <p>Site Clidage criado por Allison S. & Climon M. & Gisela L. & David B. & Cláudio - 2025</p>
+  </footer>
+
+</body>
+</html>
